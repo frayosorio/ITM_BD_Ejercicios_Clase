@@ -85,3 +85,44 @@ CREATE TABLE Region(
 CREATE UNIQUE INDEX ix_Region_Nombre
 	ON Region(IdPais, Nombre)
 
+--Crear tabla DESARROLLADOR
+CREATE TABLE Desarrollador(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_Desarrolador_Id PRIMARY KEY (Id),
+	Nombre VARCHAR(100) NOT NULL,
+	IdPais INT NOT NULL,
+	CONSTRAINT fk_Desarrollador_IdPais FOREIGN KEY (IdPais) REFERENCES Pais(Id)
+)
+
+--Crear indice de la tabla DESARROLLADOR
+CREATE UNIQUE INDEX ix_Desarrollador_Nombre
+	ON Desarrollador(Nombre)
+
+--Crear tabla TITULO
+CREATE TABLE Titulo(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_Titulo_Id PRIMARY KEY (Id),
+	Nombre VARCHAR(100) NOT NULL,
+	Año INT NULL,
+	Version VARCHAR(20) NOT NULL DEFAULT '1',
+	PrecioActual FLOAT NOT NULL DEFAULT 0,
+	IdDesarrollador INT NOT NULL,
+	CONSTRAINT fk_Titulo_IdDesarrollador FOREIGN KEY (IdDesarrollador) REFERENCES Desarrollador(Id)
+)
+
+--Crear indice de la tabla TITULO
+CREATE UNIQUE INDEX ix_Titulo_Nombre
+	ON Titulo(Nombre, Version)
+
+--Crear tabla TITULOFORMATO
+CREATE TABLE TituloFormato(
+	IdTitulo INT NOT NULL,
+	CONSTRAINT fk_TituloFormato_IdTitulo 
+		FOREIGN KEY (IdTitulo) REFERENCES Titulo(Id),
+	IdFormato INT NOT NULL,
+	CONSTRAINT fk_TituloFormato_IdFormato 
+		FOREIGN KEY (IdFormato) REFERENCES Formato(Id),
+	CONSTRAINT pk_TituloFormato
+		PRIMARY KEY(IdTitulo, IdFormato)
+)
+
