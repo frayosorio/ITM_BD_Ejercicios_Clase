@@ -207,6 +207,9 @@ CREATE TABLE EstadoVenta(
 	Nombre VARCHAR(50) NOT NULL
 )
 
+ALTER TABLE EstadoVenta
+	ADD Descripcion VARCHAR(200)
+
 --Crear indice de la tabla ESTADOVENTA
 CREATE INDEX ix_EstadoVenta_Nombre
 	ON Formato(Nombre)
