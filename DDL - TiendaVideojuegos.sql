@@ -27,6 +27,9 @@ CREATE TABLE Formato(
 	Nombre varchar(50) NOT NULL
 )
 
+ALTER TABLE Formato
+	ADD Descripcion varchar(200) NOT NULL
+
 --Crear los índices de la tabla FORMATO
 CREATE UNIQUE INDEX ix_Formato_Nombre
 	ON Formato(Nombre)
@@ -37,6 +40,9 @@ CREATE TABLE Categoria(
 	CONSTRAINT pk_Categoria_Id PRIMARY KEY(Id),
 	Nombre varchar(50) NOT NULL
 )
+
+ALTER TABLE Categoria
+	ADD Descripcion varchar(200) NOT NULL
 
 --Crear los índices de la tabla Categoria
 CREATE UNIQUE INDEX ix_Categoria_Nombre

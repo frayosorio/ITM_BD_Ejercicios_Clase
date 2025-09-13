@@ -281,6 +281,7 @@ INSERT INTO Pais(Id, Nombre, CodigoAlfa, Indicativo) VALUES(716, 'ZIMBABUE', 'ZW
 SET IDENTITY_INSERT Pais OFF
 
 SET IDENTITY_INSERT Region ON
+-- Colombia (IdPais = 170)
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(91 , 'Amazonas ', 'AMA', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(05 , 'Antioquia ', 'ANT', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(81 , 'Arauca ', 'ARA', 170);
@@ -314,6 +315,96 @@ INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(73, 'Tolima ', 'TOL', 170)
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(76, 'Valle del Cauca ', 'VAC', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(97, 'Vaupés ', 'VAU', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(99, 'Vichada ', 'VID', 170);
+
+-- Estados Unidos (IdPais = 840)
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(101, 'Alabama', 'AL', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(102, 'Alaska', 'AK', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(103, 'Arizona', 'AZ', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(104, 'Arkansas', 'AR', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(105, 'California', 'CA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(106, 'Colorado', 'CO', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(107, 'Connecticut', 'CT', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(108, 'Delaware', 'DE', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(109, 'Florida', 'FL', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(110, 'Georgia', 'GA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(111, 'Hawaii', 'HI', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(112, 'Idaho', 'ID', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(113, 'Illinois', 'IL', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(114, 'Indiana', 'IN', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(115, 'Iowa', 'IA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(116, 'Kansas', 'KS', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(117, 'Kentucky', 'KY', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(118, 'Louisiana', 'LA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(119, 'Maine', 'ME', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(120, 'Maryland', 'MD', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(121, 'Massachusetts', 'MA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(122, 'Michigan', 'MI', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(123, 'Minnesota', 'MN', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(124, 'Mississippi', 'MS', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(125, 'Missouri', 'MO', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(126, 'Montana', 'MT', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(127, 'Nebraska', 'NE', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(128, 'Nevada', 'NV', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(129, 'New Hampshire', 'NH', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(130, 'New Jersey', 'NJ', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(131, 'New Mexico', 'NM', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(132, 'New York', 'NY', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(133, 'North Carolina', 'NC', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(134, 'North Dakota', 'ND', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(135, 'Ohio', 'OH', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(136, 'Oklahoma', 'OK', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(137, 'Oregon', 'OR', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(138, 'Pennsylvania', 'PA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(139, 'Rhode Island', 'RI', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(140, 'South Carolina', 'SC', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(141, 'South Dakota', 'SD', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(142, 'Tennessee', 'TN', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(143, 'Texas', 'TX', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(144, 'Utah', 'UT', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(145, 'Vermont', 'VT', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(146, 'Virginia', 'VA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(147, 'Washington', 'WA', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(148, 'West Virginia', 'WV', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(149, 'Wisconsin', 'WI', 840);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(150, 'Wyoming', 'WY', 840);
+
+-- Distrito de Columbia
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(151, 'District of Columbia', 'DC', 840);
+
+-- Estados de México (IdPais = 484)
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(201, 'Aguascalientes', 'AGS', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(202, 'Baja California', 'BCN', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(203, 'Baja California Sur', 'BCS', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(204, 'Campeche', 'CAM', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(205, 'Chiapas', 'CHP', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(206, 'Chihuahua', 'CHH', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(207, 'Ciudad de México', 'CMX', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(208, 'Coahuila de Zaragoza', 'COA', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(209, 'Colima', 'COL', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(210, 'Durango', 'DUR', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(211, 'Guanajuato', 'GUA', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(212, 'Guerrero', 'GRO', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(213, 'Hidalgo', 'HID', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(214, 'Jalisco', 'JAL', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(215, 'México', 'MEX', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(216, 'Michoacán de Ocampo', 'MIC', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(217, 'Morelos', 'MOR', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(218, 'Nayarit', 'NAY', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(219, 'Nuevo León', 'NLE', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(220, 'Oaxaca', 'OAX', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(221, 'Puebla', 'PUE', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(222, 'Querétaro', 'QUE', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(223, 'Quintana Roo', 'ROO', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(224, 'San Luis Potosí', 'SLP', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(225, 'Sinaloa', 'SIN', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(226, 'Sonora', 'SON', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(227, 'Tabasco', 'TAB', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(228, 'Tamaulipas', 'TAM', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(229, 'Tlaxcala', 'TLA', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(230, 'Veracruz de Ignacio de la Llave', 'VER', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(231, 'Yucatán', 'YUC', 484);
+INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(232, 'Zacatecas', 'ZAC', 484);
+
 SET IDENTITY_INSERT Region OFF
 
 SET IDENTITY_INSERT Ciudad ON
@@ -1439,8 +1530,42 @@ INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99001, 'PUERTO CARREÑO', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99524, 'LA PRIMAVERA', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99624, 'SANTA ROSALÍA', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99773, 'CUMARIBO', 99);
-SET IDENTITY_INSERT Ciudad OFF
 
+-- Capitales de México (IdPais = 484) desde Id = 100000
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100000, 'Aguascalientes', 201);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100001, 'Mexicali', 202);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100002, 'La Paz', 203);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100003, 'San Francisco de Campeche', 204);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100004, 'Tuxtla Gutiérrez', 205);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100005, 'Chihuahua', 206);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100006, 'Ciudad de México', 207);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100007, 'Saltillo', 208);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100008, 'Colima', 209);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100009, 'Victoria de Durango', 210);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100010, 'Guanajuato', 211);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100011, 'Chilpancingo de los Bravo', 212);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100012, 'Pachuca de Soto', 213);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100013, 'Guadalajara', 214);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100014, 'Toluca de Lerdo', 215);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100015, 'Morelia', 216);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100016, 'Cuernavaca', 217);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100017, 'Tepic', 218);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100018, 'Monterrey', 219);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100019, 'Oaxaca de Juárez', 220);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100020, 'Heroica Puebla de Zaragoza', 221);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100021, 'Santiago de Querétaro', 222);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100022, 'Chetumal', 223);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100023, 'San Luis Potosí', 224);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100024, 'Culiacán Rosales', 225);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100025, 'Hermosillo', 226);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100026, 'Villahermosa', 227);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100027, 'Ciudad Victoria', 228);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100028, 'Tlaxcala de Xicohténcatl', 229);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100029, 'Xalapa-Enríquez', 230);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100030, 'Mérida', 231);
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100031, 'Zacatecas', 232);
+
+SET IDENTITY_INSERT Ciudad OFF
 
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Atari 2600', 0, 1977)
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Nintendo Entertainment System (NES)', 0, 1983)
@@ -1897,17 +2022,6 @@ INSERT INTO Cliente(Id, NumeroIdentificacion, IdTipoDocumento, Nombre, Direccion
 INSERT INTO Cliente(Id, NumeroIdentificacion, IdTipoDocumento, Nombre, Direccion, Movil, IdCiudad, Correo) VALUES (99, '5500500', 13, 'SANCHEZ LOPEZ JUAN CARLOS', 'CRA 69 No. 78B 12 BL 21 APTO. 303 ', '2342724',5001, 'alejin1004@yahoo.com ');
 INSERT INTO Cliente(Id, NumeroIdentificacion, IdTipoDocumento, Nombre, Direccion, Movil, IdCiudad, Correo) VALUES (100, '84837243', 13, 'MORENO LOPERA JUAN CARLOS', 'cra 69b --30b-15 apto 402', '2342807',5001, 'alejita17@msl.com');
 SET IDENTITY_INSERT Cliente OFF
-
-SET IDENTITY_INSERT EstadoVenta ON
-INSERT INTO EstadoVenta(Id, Nombre, Descripcion) 
-	VALUES (1, 'Pendiente', 'La venta ha sido registrada pero aún no ha sido procesada.'),
-	(2, 'Confirmada', 'La venta ha sido confirmada y está lista para su procesamiento.'),
-	(3, 'En Proceso', 'La orden de venta está siendo preparada y empaquetada.'),
-	(4, 'Enviada', 'La venta ha sido enviada al cliente.'),
-	(5, 'Entregada', 'La mercancía ha sido recibida por el cliente.'),
-	(6, 'Cancelada', 'La venta ha sido cancelada por el cliente o la empresa.'),
-	(7, 'Devuelta', 'La mercancía ha sido devuelta por el cliente.');
-SET IDENTITY_INSERT EstadoVenta OFF
 
 SET IDENTITY_INSERT Empleado ON
 INSERT INTO Empleado(Id, Nombre, NumeroIdentificacion, IdTipoDocumento, Clave)
