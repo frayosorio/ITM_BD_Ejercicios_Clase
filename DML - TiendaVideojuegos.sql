@@ -1531,7 +1531,7 @@ INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99524, 'LA PRIMAVERA', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99624, 'SANTA ROSALÍA', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99773, 'CUMARIBO', 99);
 
--- Capitales de México (IdPais = 484) desde Id = 100000
+-- Capitales de México (IdPais = 484) 
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100000, 'Aguascalientes', 201);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100001, 'Mexicali', 202);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100002, 'La Paz', 203);
@@ -1564,6 +1564,61 @@ INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100028, 'Tlaxcala de Xicohténcat
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100029, 'Xalapa-Enríquez', 230);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100030, 'Mérida', 231);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(100031, 'Zacatecas', 232);
+
+-- Capitales de Estados Unidos (IdPais = 484) 
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200000, 'Montgomery', 101);        -- Alabama
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200001, 'Juneau', 102);            -- Alaska
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200002, 'Phoenix', 103);           -- Arizona
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200003, 'Little Rock', 104);       -- Arkansas
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200004, 'Sacramento', 105);        -- California
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200005, 'Denver', 106);            -- Colorado
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200006, 'Hartford', 107);          -- Connecticut
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200007, 'Dover', 108);             -- Delaware
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200008, 'Tallahassee', 109);       -- Florida
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200009, 'Atlanta', 110);           -- Georgia
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200010, 'Honolulu', 111);          -- Hawaii
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200011, 'Boise', 112);             -- Idaho
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200012, 'Springfield', 113);       -- Illinois
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200013, 'Indianapolis', 114);      -- Indiana
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200014, 'Des Moines', 115);        -- Iowa
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200015, 'Topeka', 116);            -- Kansas
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200016, 'Frankfort', 117);         -- Kentucky
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200017, 'Baton Rouge', 118);       -- Louisiana
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200018, 'Augusta', 119);           -- Maine
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200019, 'Annapolis', 120);         -- Maryland
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200020, 'Boston', 121);            -- Massachusetts
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200021, 'Lansing', 122);           -- Michigan
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200022, 'Saint Paul', 123);        -- Minnesota
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200023, 'Jackson', 124);           -- Mississippi
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200024, 'Jefferson City', 125);    -- Missouri
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200025, 'Helena', 126);            -- Montana
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200026, 'Lincoln', 127);           -- Nebraska
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200027, 'Carson City', 128);       -- Nevada
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200028, 'Concord', 129);           -- New Hampshire
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200029, 'Trenton', 130);           -- New Jersey
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200030, 'Santa Fe', 131);          -- New Mexico
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200031, 'Albany', 132);            -- New York
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200032, 'Raleigh', 133);           -- North Carolina
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200033, 'Bismarck', 134);          -- North Dakota
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200034, 'Columbus', 135);          -- Ohio
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200035, 'Oklahoma City', 136);     -- Oklahoma
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200036, 'Salem', 137);             -- Oregon
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200037, 'Harrisburg', 138);        -- Pennsylvania
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200038, 'Providence', 139);        -- Rhode Island
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200039, 'Columbia', 140);          -- South Carolina
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200040, 'Pierre', 141);            -- South Dakota
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200041, 'Nashville', 142);         -- Tennessee
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200042, 'Austin', 143);            -- Texas
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200043, 'Salt Lake City', 144);    -- Utah
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200044, 'Montpelier', 145);        -- Vermont
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200045, 'Richmond', 146);          -- Virginia
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200046, 'Olympia', 147);           -- Washington
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200047, 'Charleston', 148);        -- West Virginia
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200048, 'Madison', 149);           -- Wisconsin
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200049, 'Cheyenne', 150);          -- Wyoming
+
+-- Distrito de Columbia (no es estado, pero lo incluiste en Region)
+INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(200050, 'Washington', 151); 
 
 SET IDENTITY_INSERT Ciudad OFF
 
@@ -2441,3 +2496,12 @@ INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES
 INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(203, 10, 1, 20000, 0);
 INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(204, 22, 1, 20000, 0);
 INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(205, 3, 1, 20000, 0);
+
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(1, 29, 2, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(2, 29, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(3, 10, 2, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(4, 29, 10, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(5, 24, 3, 30000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(93, 24, 3, 30000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(94, 24, 3, 30000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(119, 24, 2, 30000, 0);
