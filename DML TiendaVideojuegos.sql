@@ -2,7 +2,7 @@
 USE  TiendaVideojuegosITM
 GO
 
-SET IDENTITY_INSERT TipoDocumento ON
+SET IDENTITY_INSERT TipoDocumento ON -- Apagar el generador de autonuméricos
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(11, 'Registro Civil', 'RC')
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(12, 'Tarjeta de identidad', 'TI')
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(13, 'Cédula de ciudadanía', 'CC');
@@ -12,7 +12,7 @@ INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(31, 'Número de Identificació
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(41, 'Pasaporte', 'PS');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(42, 'Documento de Identificación Extranjero', 'NIE');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(50, 'Número de Identificación Tributaria Otro País', 'NITE');
-SET IDENTITY_INSERT TipoDocumento OFF
+SET IDENTITY_INSERT TipoDocumento OFF -- Encender el generador de autonuméricos
 
 SET IDENTITY_INSERT Pais ON
 INSERT INTO Pais(Id, Nombre, CodigoAlfa, Indicativo) VALUES(004, 'AFGANISTÁN', 'AF', '93');
