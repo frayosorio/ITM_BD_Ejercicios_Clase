@@ -104,7 +104,7 @@ SELECT *
 		JOIN TipoDocumento ON Cliente.IdTipoDocumento = TipoDocumento.Id
 	WHERE Cliente.Nombre LIKE '%JUAN%'
 
--- Listar las ventas del cliente con Identificacion = 79530543
+-- Listar las ventas del cliente con Identificacion = CC 5500100
 SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
 	C.Direccion + ' de ' + CD.Nombre Residencia,
 	V.NumeroFactura, V.Fecha,
@@ -114,9 +114,17 @@ SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
 		JOIN Ciudad CD ON C.IdCiudad = CD.Id
 		JOIN Venta V ON V.IdCliente = C.Id
 		JOIN Empleado E ON E.Id = V.IdEmpleado
-	WHERE C.Identificacion = '89028942'
+	WHERE C.Identificacion = '5500100'
 
--- Agregar detalle a la venta con factura 138
+-- Agregar detalle a la venta con factura 104
+INSERT INTO VentaDetalle
+	(IdVenta, IdTitulo, Cantidad, Precio)
+	VALUES
+	((SELECT Id FROM Venta WHERE NumeroFactura=104), 1, 2, 17500),
+	((SELECT Id FROM Venta WHERE NumeroFactura=104), 2, 1, 25000)
+
+
+-- Agregar detalle a la venta con factura 19
 INSERT INTO VentaDetalle
 	(IdVenta, IdTitulo, Cantidad, Precio)
 	VALUES
@@ -152,5 +160,53 @@ SELECT SUM(VD.Cantidad) TotalUnidadesCompradas
 		JOIN Venta V ON V.IdCliente = C.Id
 		JOIN VentaDetalle VD ON V.Id = VD.IdVenta
 	WHERE C.Identificacion = '89028942'
-		 
+
+
+-- Calcular el total de unidades compradas por cada cliente
+SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
+	SUM(VD.Cantidad) TotalUnidadesCompradas
+	FROM Cliente C
+		JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.Id
+		JOIN Venta V ON V.IdCliente = C.Id
+		JOIN VentaDetalle VD ON V.Id = VD.IdVenta
+	GROUP BY C.Nombre, TD.Sigla, C.Identificacion
+
+-- Calcular el valor comprado por cada cliente
+SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
+	SUM(VD.Cantidad * VD.Precio - VD.Descuento) TotalValorComprado
+	FROM Cliente C
+		JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.Id
+		JOIN Venta V ON V.IdCliente = C.Id
+		JOIN VentaDetalle VD ON V.Id = VD.IdVenta
+	GROUP BY C.Nombre, TD.Sigla, C.Identificacion
+	ORDER BY 3 DESC
+
+-- Obtener los clientes que han comprado 150 mil o más pesos
+SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
+	SUM(VD.Cantidad * VD.Precio - VD.Descuento) TotalValorComprado
+	FROM Cliente C
+		JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.Id
+		JOIN Venta V ON V.IdCliente = C.Id
+		JOIN VentaDetalle VD ON V.Id = VD.IdVenta
+	GROUP BY C.Nombre, TD.Sigla, C.Identificacion
+	HAVING SUM(VD.Cantidad * VD.Precio - VD.Descuento) >= 150000 
+
+-- Mostrar el cliente o los clientes que mas han comprado
+SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
+	SUM(VD.Cantidad * VD.Precio - VD.Descuento) TotalValorComprado
+	FROM Cliente C
+		JOIN TipoDocumento TD ON C.IdTipoDocumento = TD.Id
+		JOIN Venta V ON V.IdCliente = C.Id
+		JOIN VentaDetalle VD ON V.Id = VD.IdVenta
+	GROUP BY C.Nombre, TD.Sigla, C.Identificacion
+	HAVING SUM(VD.Cantidad * VD.Precio - VD.Descuento) =(
+		SELECT TOP 1 SUM(VD.Cantidad * VD.Precio - VD.Descuento)
+			FROM Cliente C
+				JOIN Venta V ON V.IdCliente = C.Id
+				JOIN VentaDetalle VD ON V.Id = VD.IdVenta
+			GROUP BY C.Id
+			ORDER BY 1 DESC
+		)
+
+
 
