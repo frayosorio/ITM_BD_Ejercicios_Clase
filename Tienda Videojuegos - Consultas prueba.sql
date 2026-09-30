@@ -201,10 +201,9 @@ SELECT C.Nombre Cliente, TD.Sigla + ' ' + C.Identificacion Identificacion,
 	GROUP BY C.Nombre, TD.Sigla, C.Identificacion
 	HAVING SUM(VD.Cantidad * VD.Precio - VD.Descuento) =(
 		SELECT TOP 1 SUM(VD.Cantidad * VD.Precio - VD.Descuento)
-			FROM Cliente C
-				JOIN Venta V ON V.IdCliente = C.Id
+			FROM Venta V 
 				JOIN VentaDetalle VD ON V.Id = VD.IdVenta
-			GROUP BY C.Id
+			GROUP BY V.IdCliente
 			ORDER BY 1 DESC
 		)
 
