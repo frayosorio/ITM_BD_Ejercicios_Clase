@@ -1,13 +1,13 @@
 -- Lista de Campeonatos con los grupos y paises organizadores y participantes
-SELECT C.Campeonato, STRING_AGG(P.Pais, ', ') Organizadores,
-	G.Grupo, PG.Pais Seleccion
+SELECT CP.IdCampeonato, C.Campeonato, STRING_AGG(P.Pais, ', ') Organizadores,
+	GP.IdGrupo, G.Grupo, PG.Pais Seleccion
 	FROM Campeonato C
 		JOIN CampeonatoPais CP ON C.Id = CP.IdCampeonato
 		JOIN Pais P ON P.Id = CP.IdPais
 		JOIN Grupo G ON C.Id = G.IdCampeonato
 		JOIN GrupoPais GP ON G.Id = GP.IdGrupo
 		JOIN Pais PG ON PG.Id = GP.IdPais
-	GROUP BY C.Campeonato, G.Grupo, PG.Pais
+	GROUP BY C.Campeonato, G.Grupo, PG.Pais, CP.IdCampeonato, GP.IdGrupo
 	ORDER BY 1, 3, 4
 
 --Consulta con información completa de cada encuentro
