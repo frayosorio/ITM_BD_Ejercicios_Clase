@@ -75,3 +75,22 @@ FROM Encuentro E
 		(106, 0, 0, '2026-06-26', 22)
 		) AS Datos(Id, Goles1, Goles2, Fecha, IdEstadio)
 	ON E.Id = Datos.Id
+
+-- Vista de Campeonatos, Grupos y Paises
+CREATE OR ALTER VIEW vCampeonatos AS
+	SELECT C.Id IdCampeonato, C.Campeonato, STRING_AGG(P.Pais, ', ') Organizadores, 
+		G.Id IdGrupo, G.Grupo,
+		GP.IdPais, PG.Pais
+		FROM Campeonato C
+			JOIN CampeonatoPais CP ON C.Id = CP.IdCampeonato
+			JOIN Pais P ON P.Id = CP.IdPais
+			JOIN Grupo G ON C.Id = G.IdCampeonato
+			JOIN GrupoPais GP ON GP.IdGrupo = G.Id
+			JOIN Pais PG ON PG.Id = GP.IdPais
+		GROUP BY C.Id, C.Campeonato, G.Grupo, PG.Pais, G.Id, GP.IdPais
+GO
+
+SELECT *
+	FROM vCampeonatos
+	
+
