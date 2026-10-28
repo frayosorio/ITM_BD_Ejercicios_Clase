@@ -22,9 +22,8 @@ WITH PaisesxGrupo AS (
 	ResultadosXPais AS (
 		SELECT PG.IdPais, COUNT(*) PJ,
 			SUM(CASE 
-				WHEN E.IdPais1	= PG.IdPais AND E.Goles1 > E.Goles2
-					THEN 1
-				WHEN E.IdPais2	= PG.IdPais AND E.Goles2 > E.Goles1
+				WHEN (E.IdPais1	= PG.IdPais AND E.Goles1 > E.Goles2)
+					OR (E.IdPais2	= PG.IdPais AND E.Goles2 > E.Goles1)
 					THEN 1
 				ELSE 0
 			END) PG,
